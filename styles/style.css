@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Product Sans';
+  src: url('../fonts/product_sans.woff') format('woff'),
+    url('../fonts/product_sans.ttf') format('truetype');
+}
+
+body {
+  padding: 0.3em;
+}
+
+.hero-text {
+  font-family: 'Product Sans', sans-serif;
+  font-size: 8em;
+}
