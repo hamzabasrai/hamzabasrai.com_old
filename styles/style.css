@@ -4,11 +4,16 @@
     url('../fonts/product_sans.ttf') format('truetype');
 }
 
-body {
-  padding: 0.3em;
+h1, p {
+  font-family: 'Product Sans', sans-serif;
+  
 }
 
 .hero-text {
-  font-family: 'Product Sans', sans-serif;
   font-size: 8em;
+}
+
+.hero-image {
+  width: 90%;
+  height: auto;
 }
