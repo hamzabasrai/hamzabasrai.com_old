@@ -4,19 +4,41 @@
     url('../fonts/product_sans.ttf') format('truetype');
 }
 
-h1, p {
+i {
+  color: black;
+}
+
+h1,
+p {
   font-family: 'Product Sans', sans-serif;
 }
 
 .hero-header {
-  font-size: 8em;
+  font-size: 4rem;
 }
 
 .hero-subtitle {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
-.hero-image {
-  width: 90%;
-  height: auto;
+/* 30% Increase */
+@media (min-width: 1440px) {
+  .hero-header {
+    font-size: 5.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.56rem;
+  }
+}
+
+/* 60% increase */
+@media (min-width: 2560px) {
+  .hero-header {
+    font-size: 6.4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.92rem;
+  }
 }
