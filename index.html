@@ -7,32 +7,86 @@
     <title>Hamza</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- fullpage.js -->
+    <link rel="stylesheet" type="text/css" href="vendor/fullpage.min.css">
+    <script type="text/javascript" src="vendor/fullpage.min.js"></script>
+
     <!-- Semantic UI -->
     <link rel="stylesheet" type="text/css" href="vendor/semantic.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="vendor/semantic.min.js"></script>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
-    
-    <!-- Styles -->
+    <script type="text/javascript" src="vendor/semantic.min.js"></script>
+
+    <!-- Local Styles and Scripts -->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script type="text/javascript" src="scripts/script.js"></script>
 </head>
 
 <body>
-    <div class="ui container">
-        <div class="ui large secondary menu">
-            <div class="right menu">
-                <a class="item">About</a>
-                <a class="item">Projects</a>
-                <a class="item">Contact</a>
+    <div id="fullpage">
+        <div id="page1" class="section">
+            <div class="ui middle aligned stackable two column grid container">
+                <div class="column">
+                    <h1 class="hero-text">Hi👋,<br />I'm Hamza</h1>
+                </div>
+                <div class="column">
+                    <img class="right floated hero-image" src="images/undraw_notebook_g9x9.svg">
+                </div>
             </div>
         </div>
-
-        <div class="ui basic segment">
-            <h1 class="hero-text">Hello,<br/>I'm Hamza</h1>
+        <div class="section">
+            <div class="ui text container">
+                <h1>About Me</h1>
+                <p>I am a 21-year-old currently studying software engineering at the University of Ottawa. I have a
+                    passion for app development and love bringing new ideas to life. When I’m not busy drowning in
+                    school work, I spend my time planning uOttaHack, reading, or playing Overwatch.</p>
+            </div>
         </div>
+        <div class="section">
+            <div class="ui container">
+                <h1>Projects</h1>
+                <div class="ui raised centered cards">
+                    <div class="ui card">
+                        <div class="image">
+                            <img src="images/undraw_dashboard_nklg.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="header">TalentBoard</div>
+                            <div class="meta">2018</div>
+                            <div class="description">
+                                An applicant tracking tool for HR staff and hiring managers
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <div class="center aligned">
+                                <i class="github icon"></i>
+                                View on GitHub
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="ui card">
+                        <div class="image">
+                            <img src="images/undraw_android_jr64.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="header">Duty Helper</div>
+                            <div class="meta">2017</div>
+                            <div class="description">
+                                An Android task management app to help families manage chores around the house
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <div class="center aligned">
+                                <i class="github icon"></i>
+                                View on GitHub
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
