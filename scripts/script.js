@@ -3,7 +3,8 @@ $(document).ready(function() {
     //options here
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     autoScrolling: true,
-    sectionsColor: ['#3AD29F', '#6C63FF']
+    sectionsColor: [ ],
+    scrollbar: true,
   });
 
   //methods

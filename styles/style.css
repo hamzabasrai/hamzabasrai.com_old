@@ -8,8 +8,12 @@ h1, p {
   font-family: 'Product Sans', sans-serif;
 }
 
-.hero-text {
+.hero-header {
   font-size: 8em;
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
 }
 
 .hero-image {
