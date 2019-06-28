@@ -12,3 +12,7 @@ npm_debug.log
 
 #Build
 build/
+
+#Gatsby
+.cache/
+public/
