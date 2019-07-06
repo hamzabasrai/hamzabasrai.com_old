@@ -7,8 +7,8 @@ const theme = {
     },
 
     fonts: {
-      Rubik: 'Rubik',
-      RobotoMono: 'Roboto Mono'    
+      Rubik: 'Rubik, sans-serif',
+      RobotoMono: 'Roboto Mono, monospace'    
     }
   };
   
