@@ -1,10 +1,11 @@
 import React from "react"
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
+import Bio from "../components/Bio";
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hamza</h1>
+    <Bio></Bio>
   </Layout>
 )
 

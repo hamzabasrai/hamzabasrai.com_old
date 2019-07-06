@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
-import GlobalStyle from "../styles/globalStyle"
+import GlobalStyle from "../styles/GlobalStyle"
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
