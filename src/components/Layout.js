@@ -1,8 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 // import { useStaticQuery, graphql } from "gatsby"
 
-import GlobalStyle from "../styles/GlobalStyle"
+import GlobalStyle from "../styles/GlobalStyle";
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -18,18 +19,16 @@ const Layout = ({ children }) => {
   return (
     <div id="root">
       <GlobalStyle></GlobalStyle>
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with ❤️ by Hamza Basrai
-        </footer>
-      </div>
+      <main>{children}</main>
+      <footer>
+        © {new Date().getFullYear()}, Built with ❤️ by Hamza Basrai
+      </footer>
     </div>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
-export default Layout
+export default Layout;

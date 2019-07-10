@@ -70,7 +70,6 @@ const GlobalStyle = createGlobalStyle`
     footer {
       margin: 10px;
       flex-shrink: 0;
-
     }
   }
 
