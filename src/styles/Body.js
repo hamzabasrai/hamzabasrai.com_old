@@ -6,7 +6,7 @@ const { colors, fonts } = theme;
 
 const Body = styled.p`
   position: relative;
-  font-size: 16px;
+  font-size: 18px;
   margin: 10px 0 10px;
   width: 100%;
 
