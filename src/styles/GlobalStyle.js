@@ -1,9 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
-import theme from './theme';
+import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
 // import media from './media';
 // const { colors, fontSizes, fonts } = theme;
 const { colors, fonts } = theme;
-
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -62,7 +61,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
+    grid-template-columns: 200px 1fr 200px;
   }
 
 
@@ -83,15 +82,28 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    color: inherit;
+    color: #EE2B47;
     position: relative;
-    /* transition: ${theme.transition}; */
+    transition: color 0.4s ease-out;
     cursor: pointer;
 
     &:hover,
-    &:focus {
-      /* color: ${colors.green}; */
-      outline: 0;
+    &:hover:after {
+      color: #FF1336;
+      right: 0;
+      text-decoration: none;
+    }
+
+    &:after {
+      border-radius: 1em;
+      border-top: 0.1em solid #EE2B47;
+      content: "";
+      position: absolute;
+      right: 100%;
+      bottom: 0.14em;
+      left: 0;
+      transition: right 0.4s cubic-bezier(0, 0.5, 0, 1),
+        border-color 0.4s ease-out;
     }
   }
 
