@@ -82,21 +82,21 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    color: #EE2B47;
+    color: #F15168;
     position: relative;
     transition: color 0.4s ease-out;
     cursor: pointer;
 
     &:hover,
     &:hover:after {
-      color: #FF1336;
+      color: #EE2B47;
       right: 0;
       text-decoration: none;
     }
 
     &:after {
       border-radius: 1em;
-      border-top: 0.1em solid #EE2B47;
+      border-top: 0.1em solid #F15168;
       content: "";
       position: absolute;
       right: 100%;
