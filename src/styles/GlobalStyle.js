@@ -59,9 +59,19 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 200px 1fr 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    footer {
+      margin: 10px;
+      flex-shrink: 0;
+
+    }
   }
 
 
