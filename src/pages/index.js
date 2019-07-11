@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
+import SEO from "../components/SEO"
 import Bio from "../components/Bio";
+import ReadingList from "../components/ReadingList";
 
 const Grid = styled.div`
   display: grid;
@@ -20,8 +22,10 @@ const Grid = styled.div`
 
 const IndexPage = () => (
   <Layout>
+  <SEO title="Home"/>
     <Grid>
       <Bio></Bio>
+      <ReadingList></ReadingList>
     </Grid>
   </Layout>
 );
