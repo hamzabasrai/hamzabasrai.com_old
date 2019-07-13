@@ -6,9 +6,9 @@ import theme from './theme';
 
 //TODO: Add media queries
 
-const Container = styled.div`
+const Section = styled.section`
   width: 1040px;
   height: auto;
 `;
 
-export default Container;
+export default Section;

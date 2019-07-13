@@ -8,7 +8,7 @@ const Body = styled.p`
   position: relative;
   font-size: 18px;
   margin: 10px 0 10px;
-  width: 100%;
+  /* width: 100%; */
 
   &:before {
     margin-right: 10px;

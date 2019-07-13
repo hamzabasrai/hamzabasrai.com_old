@@ -14,7 +14,7 @@ const Grid = styled.div`
   grid-row-gap: 0px;
   padding: 15px;
 
-  div {
+  section {
     grid-column-start: 2;
     grid-column-end: 3;
   }

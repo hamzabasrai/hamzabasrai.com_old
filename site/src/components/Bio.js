@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Heading from "../styles/Heading";
 import Body from "../styles/Body";
-import Container from "../styles/Container";
+import Section from "../styles/Section";
 
 
 export class Bio extends Component {
   render() {
     return (
-      <Container>
+      <Section>
         <Heading>Hi, I'm Hamza</Heading>
         <Body>
           I am an enthusiastic software engineering student that loves to solve
@@ -17,7 +17,7 @@ export class Bio extends Component {
           University of Ottawa. I'm an avid <a>reader</a> and like to discover new
           music.
         </Body>
-      </Container>
+      </Section>
     );
   }
 }
