@@ -92,17 +92,6 @@ export class ReadingList extends Component {
             <Books>
               {this.state.Books.Read.map(book => (
                 <Book key={book.title} book={book}></Book>
-                // <Tippy
-                //   content={book.title + " by " + book.author}
-                //   placement="top"
-                //   animation="scale"
-                //   duration={[250, 175]}
-                //   delay={[100, 0]}
-                //   distance={5}
-                //   key={book.title}
-                // >
-                //   <Book src={book.imageURL} alt={book.title} />
-                // </Tippy>
               ))}
             </Books>
             <Body>Books I've Read</Body>
