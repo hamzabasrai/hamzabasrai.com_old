@@ -23,6 +23,24 @@ const extractBook = (data: any): Book => {
   };
 };
 
+const formatData = (current: any, read: any) => {
+  //Convert GoodReads Data from XML to JSON
+  const raw_current = JSON.parse(
+    convert.xml2json(current.data, { compact: true, spaces: 4 })
+  );
+  const raw_read = JSON.parse(
+    convert.xml2json(read.data, { compact: true, spaces: 4 })
+  );
+
+  //Send current book and 3 read books back to client
+  return {
+    CurrentBook: extractBook(raw_current.GoodreadsResponse.reviews.review),
+    Read: raw_read.GoodreadsResponse.reviews.review
+      .map((book: any) => extractBook(book))
+      .slice(0, 3)
+  };
+};
+
 export const getBooks = functions.https.onRequest(async (request, response) => {
   //respond to CORS preflight requests
   if (request.method == "OPTIONS") {
@@ -31,41 +49,18 @@ export const getBooks = functions.https.onRequest(async (request, response) => {
   response.set(ResponseHeaders);
 
   try {
+    //Get data from GoodReads
     const currentResp = await axios.get(
       "https://www.goodreads.com/review/list?v=2&key=7noSJ72wi0lDE0L9tPpCwA&id=87355765&shelf=currently-reading"
     );
     const readResp = await axios.get(
       "https://www.goodreads.com/review/list?v=2&key=7noSJ72wi0lDE0L9tPpCwA&id=87355765&shelf=read"
     );
-
-    axios
-      .all([currentResp, readResp])
-      .then(
-        axios.spread(function(current, read) {
-          // GoodReads API sends XML, convert to JSON
-          const raw_current = JSON.parse(
-            convert.xml2json(current.data, { compact: true, spaces: 4 })
-          );
-          const raw_read = JSON.parse(
-            convert.xml2json(read.data, { compact: true, spaces: 4 })
-          );
-
-          const payload = {
-            CurrentBook: extractBook(
-              raw_current.GoodreadsResponse.reviews.review
-            ),
-            Read: raw_read.GoodreadsResponse.reviews.review
-              .map((book: any) => extractBook(book))
-              .slice(0, 3)
-          };
-
-          response.status(200).send(payload);
-        })
-      )
-      .catch(err => {
-        throw err;
-      });
-
+    const [current, read] = await axios.all([currentResp, readResp]);
+    
+    //Send books to client
+    const payload = formatData(current, read);
+    response.status(200).send(payload);
   } catch (error) {
     console.log(error);
     response.status(500).send("Error");
