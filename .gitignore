@@ -49,6 +49,7 @@ node_modules/
 # Optional npm cache directory
 .npm
 .cache/
+public/
 
 # Optional eslint cache
 .eslintcache
