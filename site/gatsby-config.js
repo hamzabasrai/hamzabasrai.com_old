@@ -16,7 +16,6 @@ module.exports = {
         display: 'swap'
       }
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
   ],
 }
