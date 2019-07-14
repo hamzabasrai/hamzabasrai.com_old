@@ -12,7 +12,7 @@ export class ReadingList extends Component {
 
   render() {
     return (
-      <Section>
+      <Section name="readingList">
         <Heading>Reading List</Heading>
         <Body>
           Here’s a look at what I’m reading and what I've read in the past. I’m
