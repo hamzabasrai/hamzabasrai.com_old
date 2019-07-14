@@ -9,6 +9,9 @@ import theme from './theme';
 const Section = styled.section`
   width: 1040px;
   height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 10px;
 `;
 
 export default Section;
