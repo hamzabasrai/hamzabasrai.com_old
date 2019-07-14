@@ -23,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: ${colors.lightNavy};
-    color: ${colors.lightGrey};
+    background-color: ${colors.background};
+    color: ${colors.text};
     line-height: 1.3;
     font-family: ${fonts.RobotoMono};
 
@@ -32,19 +32,6 @@ const GlobalStyle = createGlobalStyle`
     &.hidden {
       overflow: hidden;
     }
-    /* &.blur {
-      overflow: hidden;
-      #root > .container > * {
-        filter: blur(5px) brightness(0.7);
-        transition: ${theme.transition};
-        pointer-events: none;
-        user-select: none;
-      }
-    }  */
-  }
-
-  ::selection {
-    /* background-color: ${colors.highlight}; */
   }
 
   h1,
@@ -53,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5 {
     font-family: ${fonts.Rubik};
-    color: ${colors.lightGrey};
+    color: ${colors.text};
     margin: 0;
   }
 
@@ -91,21 +78,21 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    color: #F15168;
+    color: ${colors.link};
     position: relative;
     transition: color 0.4s ease-out;
     cursor: pointer;
 
     &:hover,
     &:hover:after {
-      color: #EE2B47;
+      color: ${colors.accent};
       right: 0;
       text-decoration: none;
     }
 
     &:after {
       border-radius: 1em;
-      border-top: 0.1em solid #F15168;
+      border-top: 0.1em solid ${colors.link};
       content: "";
       position: absolute;
       right: 100%;
@@ -123,18 +110,27 @@ const GlobalStyle = createGlobalStyle`
 
     &:focus,
     &:active {
-      /* outline-color: ${colors.blue}; */
+
     }
   }
 
   input, textarea {
-    border-radius: 0;
+    height: 3em;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: ${colors.background_input};
+    padding: 0 20px;
+    color: ${colors.text};
+    font-size: 18px;
+    font-family: ${fonts.RobotoMono};
     outline: 0;
 
     &:focus {
       outline: 0;
     }
     &::placeholder {
+      color: ${colors.placeholder}
     }
     &:focus,
     &:active {
@@ -146,6 +142,9 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0;
+    font-size: 18px;
+    font-family: ${fonts.RobotoMono};
+    color: ${colors.text};
   }
 
   ul, ol {
@@ -154,8 +153,13 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
-  .gatsby-image-outer-wrapper {
-    height: 100%;
+  .tippy-tooltip.accent-theme {
+    background-color: ${colors.accent};
+    color: ${colors.text};
+
+    .tippy-backdrop {
+      background-color: ${colors.accent};
+    }
   }
 `;
 

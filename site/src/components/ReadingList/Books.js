@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
-
-import Body from "../../styles/Body";
 import Tippy from "@tippy.js/react";
 
 const Book = props => {
@@ -10,8 +8,10 @@ const Book = props => {
     <Tippy
       content={props.book.title + " by " + props.book.author}
       placement="top"
-      animation="scale"
-      duration={[250, 175]}
+      animation="shift-away"
+      animateFill="false"
+      theme="accent"
+      duration={[200, 175]}
       delay={[0, 100]}
       distance={5}
     >
@@ -75,7 +75,7 @@ export class Books extends Component {
       <Grid>
         <Wrapper>
           <Book book={this.state.Books.CurrentBook}></Book>
-          <Body>Currently Reading</Body>
+          <p>Currently Reading</p>
         </Wrapper>
         <Wrapper>
           <ReadBooks>
@@ -83,7 +83,7 @@ export class Books extends Component {
               <Book key={book.title} book={book}></Book>
             ))}
           </ReadBooks>
-          <Body>Books I've Read</Body>
+          <p>Books I've Read</p>
         </Wrapper>
       </Grid>
     );

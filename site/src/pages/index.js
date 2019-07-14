@@ -9,8 +9,8 @@ import ReadingList from "../components/ReadingList/ReadingList";
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-row-gap: 10px;
-  padding: 15px;
+  grid-row-gap: 25px;
+  padding: 30px;
 
   section {
     grid-column-start: 2;
