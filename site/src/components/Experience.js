@@ -5,12 +5,6 @@ import { Carousel } from "react-responsive-carousel";
 import Heading from "../styles/Heading";
 import Section from "../styles/Section";
 
-const JobWrapper = styled.div`
-  /* padding: 0 50px; */
-`;
-
-const JobHeader = styled.div``;
-
 const JobTitle = styled.h3`
   font-family: "Rubik";
   font-weight: 300;
@@ -30,8 +24,6 @@ const Info = styled.p`
   }
 `;
 
-const Item = styled.li``;
-
 const ItemList = styled.ul`
   margin: 10px 0;
   list-style: none;
@@ -40,13 +32,14 @@ const ItemList = styled.ul`
     position: relative;
     padding-left: 30px;
     margin-bottom: 10px;
+    font-size: 18px;
     &:before {
       content: "▹";
       position: absolute;
       left: 0;
       color: #F15168;
       padding-left: 5px;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 20px;
     }
   }
@@ -65,8 +58,8 @@ export class Experience extends Component {
           emulateTouch={true}
           useKeyboardArrows={true}
         >
-          <JobWrapper>
-            <JobHeader>
+          <div>
+            <div>
               <JobTitle>
                 Software Engineer Intern -{" "}
                 <a
@@ -74,31 +67,31 @@ export class Experience extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Phressia
+                  Phreesia
                 </a>
               </JobTitle>
               <InfoWrapper>
                 <Info>01/2018 - 05/2018</Info>
                 <Info>Ottawa, ON</Info>
               </InfoWrapper>
-            </JobHeader>
+            </div>
             <ItemList>
-              <Item>
+              <li>
                 Worked in a team to design, develop, and maintain a checklist
                 tracking tool for Phreesia Client Support staff
-              </Item>
-              <Item>
+              </li>
+              <li>
                 Implemented user management features alongside enterprise
                 authentication with Okta Single Sign On
-              </Item>
-              <Item>
+              </li>
+              <li>
                 Extended core Phreesia web services to improve usability for
                 multiple development teams
-              </Item>
+              </li>
             </ItemList>
-          </JobWrapper>
-          <JobWrapper>
-            <JobHeader>
+          </div>
+          <div>
+            <div>
               <JobTitle>
                 Software Developer Intern -{" "}
                 <a
@@ -113,24 +106,24 @@ export class Experience extends Component {
                 <Info>05/2017 - 09/2017</Info>
                 <Info>Ottawa, ON</Info>
               </InfoWrapper>
-            </JobHeader>
+            </div>
             <ItemList>
-              <Item>
+              <li>
                 Designed, developed, and maintained an internal web application
                 used by QA analysts and project managers across multiple teams
                 to test CNW's new RESTful API
-              </Item>
-              <Item>
+              </li>
+              <li>
                 Worked closely with a fellow CO-OP student to develop, deploy,
                 and document a new API support library which is now currently in
                 production
-              </Item>
-              <Item>
+              </li>
+              <li>
                 Created automated build plans and application deployments with
                 Bamboo and Ansible
-              </Item>
+              </li>
             </ItemList>
-          </JobWrapper>
+          </div>
         </Carousel>
       </Section>
     );
