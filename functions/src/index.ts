@@ -16,10 +16,14 @@ interface Book {
 }
 
 const extractBook = (data: any): Book => {
+
+  const bookId = data.book.id._text;
+  const lastIndex = data.book.image_url._text.indexOf(bookId) + bookId.length;
+
   return {
     title: data.book.title_without_series._text,
     author: data.book.authors.author.name._text,
-    imageURL: data.book.image_url._text.slice(0, -11) + ".jpg"
+    imageURL: data.book.image_url._text.slice(0, lastIndex) + ".jpg"
   };
 };
 
@@ -37,7 +41,7 @@ const formatData = (current: any, read: any) => {
     CurrentBook: extractBook(raw_current.GoodreadsResponse.reviews.review),
     Read: raw_read.GoodreadsResponse.reviews.review
       .map((book: any) => extractBook(book))
-      .slice(0, 3)
+      .slice(0, 3),
   };
 };
 
@@ -54,7 +58,7 @@ export const getBooks = functions.https.onRequest(async (request, response) => {
       "https://www.goodreads.com/review/list?v=2&key=7noSJ72wi0lDE0L9tPpCwA&id=87355765&shelf=currently-reading"
     );
     const readResp = await axios.get(
-      "https://www.goodreads.com/review/list?v=2&key=7noSJ72wi0lDE0L9tPpCwA&id=87355765&shelf=read"
+      "https://www.goodreads.com/review/list?v=2&key=7noSJ72wi0lDE0L9tPpCwA&id=87355765&shelf=read&sort=date_read"
     );
     const [current, read] = await axios.all([currentResp, readResp]);
     
