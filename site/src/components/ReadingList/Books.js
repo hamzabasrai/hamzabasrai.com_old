@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import Tippy from "@tippy.js/react";
+import media from "../../styles/media";
 
 const Book = props => {
   return (
@@ -14,6 +15,7 @@ const Book = props => {
       duration={[200, 175]}
       delay={[0, 100]}
       distance={5}
+      size="large"
     >
       <Image src={props.book.imageURL} alt={props.book.title}></Image>
     </Tippy>
@@ -23,6 +25,7 @@ const Book = props => {
 const Image = styled.img`
   max-width: 150px;
   justify-self: center;
+  ${media.tablet`max-width: 100px;`}
 `;
 
 const ReadBooks = styled.div`

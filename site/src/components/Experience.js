@@ -11,9 +11,22 @@ const { fontSizes } = theme;
 const JobTitle = styled.h3`
   font-family: "Rubik";
   font-weight: 300;
+  padding: 10px 0 15px 0;
   font-size: ${fontSizes.large};
-  ${media.laptop`font-size: ${fontSizes.largish};`}
-  margin: 10px 0;
+  ${media.laptop`
+    font-size: ${fontSizes.largish};
+    padding: 5px 0;  
+  `}
+  ${media.tablet`
+    font-size: ${fontSizes.medium};
+    padding: 0;
+  `}
+
+  a {
+    &:after {
+      bottom: -0.14em;
+    }
+  }
 `;
 
 const Info = styled.p`

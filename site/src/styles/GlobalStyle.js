@@ -104,9 +104,21 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
-    border: 0;
-    border-radius: 0;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    height: 48px;
+    width: 75%;
+    border-radius: 10px;
+    background-color: ${colors.accent};
+    color: ${colors.text};
+    font-size: ${fontSizes.small};
+    font-family: ${fonts.RobotoMono};
+    text-transform: uppercase;
 
+    ${media.laptop`height:40px;`}
+    
     &:focus,
     &:active {
 
@@ -114,7 +126,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input, textarea {
-    height: 3em;
+    height: 48px;
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -124,6 +136,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     font-family: ${fonts.RobotoMono};
     outline: 0;
+    ${media.laptop`height:40px;`}
 
     &:focus {
       outline: 0;
