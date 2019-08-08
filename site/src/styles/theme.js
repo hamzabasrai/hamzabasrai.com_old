@@ -12,7 +12,20 @@ const theme = {
   fonts: {
     Rubik: "Rubik, sans-serif",
     RobotoMono: "Roboto Mono, monospace"
-  }
+  },
+
+  fontSizes: {
+    xsmall: '12px',
+    smallish: '16px',
+    small: '20px',
+    medium: '24px',
+    largish: '30px',
+    large: '36px',
+    xlarge: '48px',
+    xxlarge: '60px',
+    xxxlarge: '72px',
+    h3: '32px',
+  },
 };
 
 export default theme;

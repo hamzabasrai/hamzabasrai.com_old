@@ -1,27 +1,23 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
-
+import theme from "../styles/theme";
 import Heading from "../styles/Heading";
 import Section from "../styles/Section";
+import media from "../styles/media";
+
+const { fontSizes } = theme;
 
 const JobTitle = styled.h3`
   font-family: "Rubik";
   font-weight: 300;
-  font-size: 36px;
-`;
-
-const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  font-size: ${fontSizes.large};
+  ${media.laptop`font-size: ${fontSizes.largish};`}
+  margin: 10px 0;
 `;
 
 const Info = styled.p`
-  flex: 1 0 auto;
-
-  &:first-of-type + & {
-    flex: 0 1 auto;
-  }
+  margin: 10px 0;
 `;
 
 const ItemList = styled.ul`
@@ -31,16 +27,18 @@ const ItemList = styled.ul`
   li {
     position: relative;
     padding-left: 30px;
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin: 20px 0;
+
     &:before {
       content: "▹";
       position: absolute;
       left: 0;
-      color: #F15168;
+      color: #f15168;
       padding-left: 5px;
-      font-size: 24px;
-      line-height: 20px;
+      font-size: ${fontSizes.medium};
+      line-height: ${fontSizes.medium};
+      ${media.laptop`font-size: ${fontSizes.small};`}
+      ${media.tablet`font-size: ${fontSizes.smallish};`}
     }
   }
 `;
@@ -61,6 +59,35 @@ export class Experience extends Component {
           <div>
             <div>
               <JobTitle>
+                Data Analyst -{" "}
+                <a
+                  href="https://www.peopleinsight.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PeopleInsight
+                </a>
+              </JobTitle>
+              <Info>05/2019 - 08/2019 | Ottawa, ON</Info>
+            </div>
+            <ItemList>
+              <li>
+                Created and automated SQL data validation scripts helping to
+                streamline the extract-transform-load (ETL) process
+              </li>
+              <li>
+                Developed reusable Dynamic SQL to reduce redundant code across
+                multiple data validation test suites
+              </li>
+              <li>
+                Investigated and reported data anomalies such as invalid client
+                data or incorrect data transformations to ensure data veracity
+              </li>
+            </ItemList>
+          </div>
+          <div>
+            <div>
+              <JobTitle>
                 Software Engineer Intern -{" "}
                 <a
                   href="https://www.phreesia.com/"
@@ -70,10 +97,7 @@ export class Experience extends Component {
                   Phreesia
                 </a>
               </JobTitle>
-              <InfoWrapper>
-                <Info>01/2018 - 05/2018</Info>
-                <Info>Ottawa, ON</Info>
-              </InfoWrapper>
+              <Info>01/2018 - 05/2018 | Ottawa, ON</Info>
             </div>
             <ItemList>
               <li>
@@ -102,10 +126,7 @@ export class Experience extends Component {
                   Cision Canada (CNW)
                 </a>
               </JobTitle>
-              <InfoWrapper>
-                <Info>05/2017 - 09/2017</Info>
-                <Info>Ottawa, ON</Info>
-              </InfoWrapper>
+              <Info>05/2017 - 09/2017 | Ottawa, ON</Info>
             </div>
             <ItemList>
               <li>

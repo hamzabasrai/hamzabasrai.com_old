@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
-// import media from './media';
-// const { colors, fontSizes, fonts } = theme;
-const { colors, fonts } = theme;
+import media from "./media";
+const { colors, fontSizes, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -142,15 +141,24 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0;
-    font-size: 18px;
+    font-size: ${fontSizes.medium};
     font-family: ${fonts.RobotoMono};
     color: ${colors.text};
+    ${media.laptop`font-size: ${fontSizes.small};`}
+    ${media.tablet`font-size: ${fontSizes.smallish};`}
   }
 
   ul, ol {
     padding: 0;
     margin: 0;
     list-style: none;
+  }
+
+  li {
+    font-size: ${fontSizes.medium};
+    ${media.laptop`font-size: ${fontSizes.small};`}
+    ${media.tablet`font-size: ${fontSizes.smallish};`}
+    line-height: ${fontSizes.medium};
   }
 
   .tippy-tooltip.accent-theme {
