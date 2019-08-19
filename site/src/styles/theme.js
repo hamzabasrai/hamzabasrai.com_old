@@ -1,10 +1,9 @@
 const theme = {
   colors: {
-    background: "#34374C",
-    background_dark: "#2C2E3E",
+    background: "#2C2E3E",
     background_input: "rgba(246, 246, 246, 0.2)",
     placeholder: "rgba(246, 246, 246, 0.5)",
-    accent: "#EE2B47",
+    accent: "#EF233C",
     text: "#F6F6F6",
     link: "#F15168"
   },
@@ -16,9 +15,9 @@ const theme = {
 
   fontSizes: {
     xsmall: '12px',
-    smallish: '16px',
-    small: '20px',
-    medium: '24px',
+    small: '14px',
+    mediumish: '16px',
+    medium: '20px',
     largish: '30px',
     large: '36px',
     xlarge: '48px',

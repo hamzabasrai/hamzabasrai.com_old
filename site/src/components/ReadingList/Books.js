@@ -15,7 +15,7 @@ const Book = props => {
       duration={[200, 175]}
       delay={[0, 100]}
       distance={5}
-      size="large"
+      // size="large"
     >
       <Image src={props.book.imageURL} alt={props.book.title}></Image>
     </Tippy>
@@ -23,9 +23,8 @@ const Book = props => {
 };
 
 const Image = styled.img`
-  max-width: 150px;
+  max-width: 75px;
   justify-self: center;
-  ${media.tablet`max-width: 100px;`}
 `;
 
 const ReadBooks = styled.div`

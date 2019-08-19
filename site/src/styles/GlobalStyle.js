@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
-import media from "./media";
 const { colors, fontSizes, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
@@ -44,11 +43,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    padding: 30px; 
     main {
       flex: 1 0 auto;
     }
@@ -56,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
     footer {
       margin: 10px;
       flex-shrink: 0;
+      text-align: center;
     }
   }
 
@@ -113,11 +109,11 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
     background-color: ${colors.accent};
     color: ${colors.text};
-    font-size: ${fontSizes.small};
+    /* font-size: ${fontSizes.small}; */
     font-family: ${fonts.RobotoMono};
     text-transform: uppercase;
 
-    ${media.laptop`height:40px;`}
+
     
     &:focus,
     &:active {
@@ -133,10 +129,10 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${colors.background_input};
     padding: 0 20px;
     color: ${colors.text};
-    font-size: 18px;
+    /* font-size: 18px; */
     font-family: ${fonts.RobotoMono};
     outline: 0;
-    ${media.laptop`height:40px;`}
+
 
     &:focus {
       outline: 0;
@@ -154,11 +150,10 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0;
-    font-size: ${fontSizes.medium};
+    font-size: ${fontSizes.small};
     font-family: ${fonts.RobotoMono};
     color: ${colors.text};
-    ${media.laptop`font-size: ${fontSizes.small};`}
-    ${media.tablet`font-size: ${fontSizes.smallish};`}
+
   }
 
   ul, ol {
@@ -168,10 +163,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   li {
-    font-size: ${fontSizes.medium};
-    ${media.laptop`font-size: ${fontSizes.small};`}
-    ${media.tablet`font-size: ${fontSizes.smallish};`}
-    line-height: ${fontSizes.medium};
+    font-size: ${fontSizes.small};
+    line-height: ${fontSizes.small};
   }
 
   .tippy-tooltip.accent-theme {

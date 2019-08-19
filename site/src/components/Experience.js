@@ -1,59 +1,48 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Carousel } from "react-responsive-carousel";
 import theme from "../styles/theme";
 import Heading from "../styles/Heading";
 import Section from "../styles/Section";
 import media from "../styles/media";
+import Card from "../styles/Card";
+import peopleinsight from "../images/peopleinsight.png";
+import phreesia from "../images/phreesia.png";
+import cision from "../images/cision.png";
+import cision2 from "../images/cision2.png";
 
 const { fontSizes } = theme;
 
-const JobTitle = styled.h3`
+const Title = styled.h3`
   font-family: "Rubik";
   font-weight: 300;
-  padding: 10px 0 15px 0;
-  font-size: ${fontSizes.large};
-  ${media.laptop`
-    font-size: ${fontSizes.largish};
-    padding: 5px 0;  
-  `}
-  ${media.tablet`
-    font-size: ${fontSizes.medium};
-    padding: 0;
-  `}
+  color: #000000;`;
 
-  a {
-    &:after {
-      bottom: -0.14em;
-    }
-  }
+const JobTitle = styled(Title)`
+  font-size: ${fontSizes.medium};
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: end;
 `;
 
-const Info = styled.p`
-  margin: 10px 0;
+const Company = styled(Title)`
+  font-size: ${fontSizes.mediumish};
+  grid-area: 2 / 2 / 2 / 3;
+  align-self: start;
 `;
 
-const ItemList = styled.ul`
-  margin: 10px 0;
-  list-style: none;
+const JobInfo = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+`;
 
-  li {
-    position: relative;
-    padding-left: 30px;
-    margin: 20px 0;
-
-    &:before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #f15168;
-      padding-left: 5px;
-      font-size: ${fontSizes.medium};
-      line-height: ${fontSizes.medium};
-      ${media.laptop`font-size: ${fontSizes.small};`}
-      ${media.tablet`font-size: ${fontSizes.smallish};`}
-    }
-  }
+const Logo = styled.img`
+  grid-area: 1 / 1 / 3 / 2;
+  padding: 5px;
+  max-width: 75%;
+  justify-self: center;
+  align-self: center;
 `;
 
 export class Experience extends Component {
@@ -61,104 +50,27 @@ export class Experience extends Component {
     return (
       <Section>
         <Heading>Experience</Heading>
-        <Carousel
-          showThumbs={false}
-          showStatus={false}
-          showIndicators={true}
-          showArrows={false}
-          emulateTouch={true}
-          useKeyboardArrows={true}
-        >
-          <div>
-            <div>
-              <JobTitle>
-                Data Analyst -{" "}
-                <a
-                  href="https://www.peopleinsight.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  PeopleInsight
-                </a>
-              </JobTitle>
-              <Info>05/2019 - 08/2019 | Ottawa, ON</Info>
-            </div>
-            <ItemList>
-              <li>
-                Created and automated SQL data validation scripts helping to
-                streamline the extract-transform-load (ETL) process
-              </li>
-              <li>
-                Developed reusable Dynamic SQL to reduce redundant code across
-                multiple data validation test suites
-              </li>
-              <li>
-                Investigated and reported data anomalies such as invalid client
-                data or incorrect data transformations to ensure data veracity
-              </li>
-            </ItemList>
-          </div>
-          <div>
-            <div>
-              <JobTitle>
-                Software Engineer Intern -{" "}
-                <a
-                  href="https://www.phreesia.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Phreesia
-                </a>
-              </JobTitle>
-              <Info>01/2018 - 05/2018 | Ottawa, ON</Info>
-            </div>
-            <ItemList>
-              <li>
-                Worked in a team to design, develop, and maintain a checklist
-                tracking tool for Phreesia Client Support staff
-              </li>
-              <li>
-                Implemented user management features alongside enterprise
-                authentication with Okta Single Sign On
-              </li>
-              <li>
-                Extended core Phreesia web services to improve usability for
-                multiple development teams
-              </li>
-            </ItemList>
-          </div>
-          <div>
-            <div>
-              <JobTitle>
-                Software Developer Intern -{" "}
-                <a
-                  href="https://www.newswire.ca/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Cision Canada (CNW)
-                </a>
-              </JobTitle>
-              <Info>05/2017 - 09/2017 | Ottawa, ON</Info>
-            </div>
-            <ItemList>
-              <li>
-                Designed, developed, and maintained an internal web application
-                used by QA analysts and project managers across multiple teams
-                to test CNW's new RESTful API
-              </li>
-              <li>
-                Worked closely with a fellow CO-OP student to develop, deploy,
-                and document a new API support library which is now currently in
-                production
-              </li>
-              <li>
-                Created automated build plans and application deployments with
-                Bamboo and Ansible
-              </li>
-            </ItemList>
-          </div>
-        </Carousel>
+        <Card>
+          <JobInfo>
+            <Logo src={peopleinsight}></Logo>
+            <JobTitle>Data Analyst</JobTitle>
+            <Company>PeopleInsight</Company>
+          </JobInfo>
+        </Card>
+        <Card>
+          <JobInfo>
+            <Logo src={phreesia}></Logo>
+            <JobTitle>Software Engineer</JobTitle>
+            <Company>Phreesia</Company>
+          </JobInfo>
+        </Card>
+        <Card>
+          <JobInfo>
+            <Logo src={cision2}></Logo>
+            <JobTitle>Software Developer</JobTitle>
+            <Company>Cision Canada</Company>
+          </JobInfo>
+        </Card>
       </Section>
     );
   }
