@@ -51,10 +51,10 @@ const GlobalStyle = createGlobalStyle`
     footer {
       margin: 10px;
       flex-shrink: 0;
+      font-size: ${fontSizes.small};
       text-align: center;
     }
   }
-
 
   img {
     width: 100%;
@@ -104,17 +104,15 @@ const GlobalStyle = createGlobalStyle`
     border-style: initial;
     border-color: initial;
     border-image: initial;
-    height: 48px;
-    width: 75%;
+    height: 36px;
+    width: 100%;
     border-radius: 10px;
     background-color: ${colors.accent};
     color: ${colors.text};
-    /* font-size: ${fontSizes.small}; */
+    font-size: ${fontSizes.small};
     font-family: ${fonts.RobotoMono};
     text-transform: uppercase;
 
-
-    
     &:focus,
     &:active {
 
@@ -122,14 +120,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input, textarea {
-    height: 48px;
+    height: 36px;
     width: 100%;
     border: none;
     border-radius: 10px;
     background-color: ${colors.background_input};
     padding: 0 20px;
     color: ${colors.text};
-    /* font-size: 18px; */
+    font-size: ${fontSizes.small};
     font-family: ${fonts.RobotoMono};
     outline: 0;
 
