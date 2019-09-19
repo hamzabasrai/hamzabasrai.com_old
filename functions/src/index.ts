@@ -10,9 +10,10 @@ const ResponseHeaders = {
 };
 
 interface Book {
-  title: String;
-  author: String;
-  imageURL: String;
+  title: string;
+  author: string;
+  imageURL: string;
+  completedDate: string;
 }
 
 const extractBook = (data: any): Book => {
@@ -23,7 +24,8 @@ const extractBook = (data: any): Book => {
   return {
     title: data.book.title_without_series._text,
     author: data.book.authors.author.name._text,
-    imageURL: data.book.image_url._text.slice(0, lastIndex) + ".jpg"
+    imageURL: data.book.image_url._text.slice(0, lastIndex) + ".jpg",
+    completedDate: data.read_at._text ? new Date(data.read_at._text).toLocaleDateString() : ""
   };
 };
 
@@ -47,7 +49,7 @@ const formatData = (current: any, read: any) => {
 
 export const getBooks = functions.https.onRequest(async (request, response) => {
   //respond to CORS preflight requests
-  if (request.method == "OPTIONS") {
+  if (request.method === "OPTIONS") {
     response.status(204).send("");
   }
   response.set(ResponseHeaders);
