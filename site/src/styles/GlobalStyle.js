@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    padding: 30px; 
+    padding: 10px; 
     main {
       flex: 1 0 auto;
     }
@@ -53,6 +53,10 @@ const GlobalStyle = createGlobalStyle`
       flex-shrink: 0;
       font-size: ${fontSizes.small};
       text-align: center;
+    }
+
+    @media screen and (min-width: 375px) {
+      padding: 30px;
     }
   }
 
@@ -152,6 +156,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${fonts.RobotoMono};
     color: ${colors.text};
 
+    @media screen and (min-width: 768px) {
+      font-size: ${fontSizes.mediumish};
+    }
   }
 
   ul, ol {
