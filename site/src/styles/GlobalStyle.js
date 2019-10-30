@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
     }
     footer {
       margin: 10px;
-      font-size: ${fontSizes.small};
+      font-size: ${fontSizes.bodySmall};
       text-align: center;
     }
   }
@@ -107,7 +107,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
     background-color: ${colors.accent};
     color: ${colors.text};
-    font-size: ${fontSizes.small};
+    font-size: ${fontSizes.bodySmall};
     font-family: ${fonts.RobotoMono};
     text-transform: uppercase;
 
@@ -125,7 +125,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${colors.background_input};
     padding: 0 20px;
     color: ${colors.text};
-    font-size: ${fontSizes.small};
+    font-size: ${fontSizes.bodySmall};
     font-family: ${fonts.RobotoMono};
     outline: 0;
 
@@ -146,12 +146,12 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0;
-    font-size: ${fontSizes.small};
+    font-size: ${fontSizes.bodySmall};
     font-family: ${fonts.RobotoMono};
     color: ${colors.text};
 
     @media screen and (min-width: 768px) {
-      font-size: ${fontSizes.medium};
+      font-size: ${fontSizes.bodyMedium};
     }
   }
 
@@ -162,8 +162,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   li {
-    font-size: ${fontSizes.small};
-    line-height: ${fontSizes.small};
+    font-size: ${fontSizes.bodySmall};
+    line-height: ${fontSizes.bodySmall};
   }
 `;
 

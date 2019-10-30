@@ -14,10 +14,11 @@ const theme = {
   },
 
   fontSizes: {
-    small: '16px',
-    medium: '24px',
-    large: '50px',
-    xlarge: '120px',
+    bodySmall: '16px',
+    bodyMedium: '24px',
+    headerSmall: '36px',
+    headerMedium: '50px',
+    headerLarge: '120px',
     xxlarge: '60px',
     xxxlarge: '144px',
   },
