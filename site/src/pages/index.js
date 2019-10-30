@@ -5,10 +5,9 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Bio from "../components/Bio";
 import Projects from "../components/Projects";
+import ReadingList from "../components/ReadingList/ReadingList";
 
 const Grid = styled.div`
-  max-width: 100%;
-  min-height: 100%;
   display: grid;
   grid-template-columns: 1fr;
 `;
@@ -19,6 +18,7 @@ const IndexPage = () => (
       <SEO title="Home" />
       <Bio></Bio>
       <Projects></Projects>
+      <ReadingList></ReadingList>
     </Grid>
   </Layout>
 );

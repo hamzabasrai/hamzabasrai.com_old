@@ -21,8 +21,8 @@ export class Bio extends Component {
           I'm Hamza
         </Title>
         <p>
-          I’m a fourth year software engineering student interested in system
-          design, product design, and making an impact with my work.
+          I’m a senior software engineering student interested in system
+          design, product design, and making a meaningful impact with my work.
         </p>
       </Section>
     );

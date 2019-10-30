@@ -3,12 +3,15 @@ import styled from "styled-components";
 
 const SuggestionWrapper = styled.form`
   display: grid;
-  /* grid-template-columns: 2fr 1fr; */
-  /* grid-column-gap: 10px; */
   align-items: center;
   justify-items: center;
-  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   grid-row-gap: 10px;
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 10px;
+  }
 `;
 
 const Suggestion = () => {

@@ -102,52 +102,52 @@ const GlobalStyle = createGlobalStyle`
     border-style: initial;
     border-color: initial;
     border-image: initial;
-    height: 36px;
+    padding: 10px 20px;
     width: 100%;
     border-radius: 10px;
-    background-color: ${colors.accent};
     color: ${colors.text};
     font-size: ${fontSizes.bodySmall};
-    font-family: ${fonts.RobotoMono};
+    font-family: ${fonts.GothicA1};
     text-transform: uppercase;
-
+    outline: 0;
+    
     &:focus,
     &:active {
+      outline: 0;
+    }
 
+    @media screen and (min-width: 768px) {
+      font-size: ${fontSizes.bodyMedium};
     }
   }
 
   input, textarea {
-    height: 36px;
     width: 100%;
-    border: none;
+    border: 1px solid black;
     border-radius: 10px;
-    background-color: ${colors.background_input};
-    padding: 0 20px;
+    padding: 10px 20px;
     color: ${colors.text};
     font-size: ${fontSizes.bodySmall};
-    font-family: ${fonts.RobotoMono};
+    font-family: ${fonts.GothicA1};
     outline: 0;
 
-
-    &:focus {
-      outline: 0;
-    }
-    &::placeholder {
-      color: ${colors.placeholder}
-    }
     &:focus,
     &:active {
+      outline: 0;
       &::placeholder {
         opacity: 0.5;
       }
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: ${fontSizes.bodyMedium};
     }
   }
 
   p {
     margin: 0;
     font-size: ${fontSizes.bodySmall};
-    font-family: ${fonts.RobotoMono};
+    font-family: ${fonts.GothicA1};
     color: ${colors.text};
 
     @media screen and (min-width: 768px) {

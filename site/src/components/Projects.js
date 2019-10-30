@@ -1,16 +1,7 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import Section from "../styles/Section";
-import theme from "../styles/theme";
-const { colors, fontSizes, fonts } = theme;
+import Heading from "../styles/Heading";
 
-const Heading = styled.h2`
-  font-size: ${fontSizes.headerSmall};
-
-  @media screen and (min-width: 768px) {
-    font-size: ${fontSizes.headerMedium};
-  }
-`;
 
 export class Projects extends Component {
   render() {
