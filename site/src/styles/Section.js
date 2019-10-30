@@ -6,6 +6,10 @@ import media from '../styles/media';
 const Section = styled.section`
   display: flex;
   flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10%;
+
 `;
 
 export default Section;

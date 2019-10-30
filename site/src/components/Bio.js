@@ -1,21 +1,26 @@
 import React, { Component } from "react";
-import Heading from "../styles/Heading";
 import Section from "../styles/Section";
+import styled from 'styled-components';
+import theme from "..styles/theme";
+const { colors, fontSizes, fonts } = theme;
 
+
+const Title = styled.h1`
+  font-size: ${fontSizes.large};
+
+  @media screen and (min-width: 768px) {
+      font-size: ${fontSizes.xlarge};
+  }
+`
 
 export class Bio extends Component {
+
+  
   render() {
     return (
       <Section>
-        <Heading>Hi, I'm Hamza</Heading>
-        <p>
-          I am an enthusiastic software engineering student that loves to solve
-          interesting problems. I'm a big fan of product design and creating
-          software that impacts the lives of others. Outside of school, I co-lead
-          the organizing team of an MLH Hackathon called <a href="https://2019.uottahack.ca" target="_blank" rel="noopener noreferrer">uOttaHack</a> at the
-          University of Ottawa. I'm an avid <a href="#readingList">reader</a> and like to discover new
-          music.
-        </p>
+        <Title>Hi, <br/>I'm Hamza</Title>
+        <p>I’m a fourth year software engineering student interested in system design, product design, and making an impact with my work.</p>
       </Section>
     );
   }
