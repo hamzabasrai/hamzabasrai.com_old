@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: ${colors.text};
     line-height: 1.3;
-    font-family: ${fonts.RobotoMono};
+    font-family: ${fonts.GothicA1};
 
     &.hidden {
       overflow: hidden;
