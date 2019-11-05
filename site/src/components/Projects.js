@@ -3,6 +3,8 @@ import Section from "../styles/Section";
 import Heading from "../styles/Heading";
 import styled from "styled-components";
 import Card from "../styles/Card";
+import theme from "../styles/theme";
+const { colors, fontSizes, fonts } = theme;
 
 const ProjectGrid = styled.div`
   display: grid;
@@ -33,18 +35,20 @@ const Project = styled(Card)`
   .description {
     grid-area: 2 / 1 / 4 / 4;
     padding: 0;
+    font-size: ${fontSizes.bodySmall};
   }
 
   .date {
     justify-self: self-end;
     align-self: center;
     grid-area: 1 / 3 / 2 / 4;
+    font-weight: 300;
   }
 
   .action {
-    justify-self: center;
     align-self: center;
     grid-area: 4 / 1 / 5 / 4;
+    margin: 0 15px;
   }
 `;
 
@@ -57,12 +61,13 @@ export class Projects extends Component {
           <Project className="">
             <h1 className="heading">hamzabasrai.com</h1>
             <p className="description">
-              My personal website/workspace where you're reading this right now
+              My personal website/workspace on the interwebs, where you're
+              reading this right now
             </p>
             <p className="date">2019</p>
-            <button type="button" className="action">
-              View Code
-            </button>
+            <div className="action">
+              <button type="button">View Code</button>
+            </div>
           </Project>
           <Project>
             <h1 className="heading">TalentBoard</h1>
@@ -71,20 +76,21 @@ export class Projects extends Component {
               throughout their interview process.
             </p>
             <p className="date">2018</p>
-            <button type="button" className="action">
-              View Demo
-            </button>
+            <div className="action">
+              <button type="button">View Demo</button>
+            </div>
           </Project>
           <Project>
             <h1 className="heading">Duty Helper</h1>
             <p className="description">
-              An Android application to gameify household chores for famillies.
-              Parents can assign chores to their kids who in turn, earn points.
+              An Android application to gameify household chores for families.
+              Parents can assign chores to their kids and reward points on
+              completion.
             </p>
             <p className="date">2017</p>
-            <button type="button" className="action">
-              View Code
-            </button>
+            <div className="action">
+              <button type="button">View Code</button>
+            </div>
           </Project>
         </ProjectGrid>
       </Section>
