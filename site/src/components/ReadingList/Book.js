@@ -1,55 +1,60 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
-import theme from '../../styles/theme'
+import Card from "../../styles/Card";
+import theme from "../../styles/theme";
 const { colors, fontSizes, fonts } = theme;
 
-const BookContainer = styled.div`
+const BookContainer = styled(Card)`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
-`;
 
-const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 2em;
-`;
+  .label {
+    display: block;
+    font-weight: 300;
+    font-size: ${fontSizes.bodySmall};
+    text-transform: uppercase;
+  }
 
-const Image = styled.img`
-  max-width: 100%;
-  justify-self: end;
-  border-radius: 10px;
-`;
+  .title {
+    grid-area: 1 / 1 / 2 / 4;
+    align-self: center;
 
-const Title = styled.h3`
-  font-size: ${fontSizes.largish};
-`;
+    h3 {
+      font-size: ${fontSizes.bodyMedium};
+    }
+  }
 
-const Author = styled.p``;
+  .author {
+    grid-area: 2 / 1 / 3 / 4;
+    align-self: center;
+    font-size: ${fontSizes.bodySmall};
+  }
 
-const CompletedDate = styled.p`
-  color: ${colors.link};
-  margin: 10px 0;
+  .status {
+    grid-area: 3 / 1 / 4 / 4;
+    align-self: center;
+    font-size: ${fontSizes.bodySmall};
+  }
 `;
 
 export class Book extends Component {
   render() {
     return (
       <BookContainer>
-        <Image
-          src={this.props.book.imageURL}
-          alt={this.props.book.title}
-        ></Image>
-        <InfoContainer>
-          <Title>{this.props.book.title}</Title>
-          <Author>by {this.props.book.author}</Author>
-          <CompletedDate>
-            {this.props.book.completedDate === ""
-              ? "Currently Reading"
-              : 'Finished on ' + this.props.book.completedDate}
-          </CompletedDate>
-        </InfoContainer>
+        <div className="title">
+          <label className="label">Title</label>
+          <h3>{this.props.book.title}</h3>
+        </div>
+        <div className="author">
+          <label className="label">Author</label>
+          <h4>{this.props.book.author}</h4>
+        </div>
+        <div className="status">
+          <label className="label">Date Completed</label>
+          <h4>{this.props.book.status}</h4>
+        </div>
       </BookContainer>
     );
   }

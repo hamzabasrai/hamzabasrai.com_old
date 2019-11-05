@@ -5,19 +5,41 @@ import Section from "../../styles/Section";
 import Book from "./Book";
 import Suggestion from "./Suggestion";
 import styled from "styled-components";
-import Card from "../../styles/Card";
 
 const BookList = styled.div`
-  padding: 5% 0;
+  padding: 15px 0;
   display: grid;
   grid-template-rows: 1fr;
-  grid-row-gap: 20px;
+  grid-row-gap: 25px;
 
   @media screen and (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
   }
 `;
+
+const books = [
+  {
+    title: "Losing the Signal",
+    author: "Jacqui McNish",
+    status: "Currently Reading"
+  },
+  {
+    title: "The Devotion of Suspect X",
+    author: "Keigo Higashino",
+    status: "02/10/2019"
+  },
+  {
+    title: "Prisoner's Dilemma",
+    author: "William Poundstone",
+    status: "01/10/2019"
+  },
+  {
+    title: "Circe",
+    author: "Madeline Miller",
+    status: "26/07/2019"
+  }
+];
 
 export class ReadingList extends Component {
   state = {
@@ -49,22 +71,9 @@ export class ReadingList extends Component {
           below
         </p>
         <BookList>
-          <Card>
-            <h3>Losing the Signal</h3>
-            <h4>by Jacquie McNish</h4>
-          </Card>
-          <Card>
-            <h3>The Devotion of Suspect X</h3>
-            <h4>by Keigo Higashino</h4>
-          </Card>
-          <Card>
-            <h3>Prisoner's Dilemma</h3>
-            <h4>by William Poundstone</h4>
-          </Card>
-          <Card>
-            <h3>Circe</h3>
-            <h4>by Madeline Miller</h4>
-          </Card>
+          {books.map(value => {
+            return <Book book={value}></Book>
+          })}
         </BookList>
         <Suggestion></Suggestion>
       </Section>

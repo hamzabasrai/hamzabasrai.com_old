@@ -7,6 +7,7 @@ const SuggestionWrapper = styled.form`
   justify-items: center;
   grid-template-rows: 1fr;
   grid-row-gap: 10px;
+  margin: 10px 0;
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 2fr 1fr;
