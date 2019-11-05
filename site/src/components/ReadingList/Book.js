@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Card from "../../styles/Card";
 import theme from "../../styles/theme";
+import gr from "../../images/goodreads.png";
 const { colors, fontSizes, fonts } = theme;
 
 const BookContainer = styled(Card)`
@@ -37,6 +38,14 @@ const BookContainer = styled(Card)`
     align-self: center;
     font-size: ${fontSizes.bodySmall};
   }
+
+  .goodreads {
+    grid-area: 3 / 3 / 4 / 4;
+    justify-self: end; 
+    align-self: center;
+    max-height: 48px;
+    max-width: 48px;
+  }
 `;
 
 export class Book extends Component {
@@ -54,6 +63,9 @@ export class Book extends Component {
         <div className="status">
           <label className="label">Date Completed</label>
           <h4>{this.props.book.status}</h4>
+        </div>
+        <div className="goodreads">
+          <img src={gr}></img>
         </div>
       </BookContainer>
     );
