@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
+import bg from "../images/background.svg";
 const { colors, fontSizes, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
@@ -24,6 +25,15 @@ const GlobalStyle = createGlobalStyle`
     color: ${colors.text};
     line-height: 1.3;
     font-family: ${fonts.GothicA1};
+    background-image: url(${bg});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width: 1440px){
+      background-position: 0 0;  
+      background-size: 100%;
+    }
 
     &.hidden {
       overflow: hidden;
@@ -114,10 +124,6 @@ const GlobalStyle = createGlobalStyle`
     &:focus,
     &:active {
       outline: 0;
-    }
-
-    @media screen and (min-width: 768px) {
-      font-size: ${fontSizes.bodyMedium};
     }
   }
 
