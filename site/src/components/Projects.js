@@ -66,7 +66,13 @@ export class Projects extends Component {
             </p>
             <p className="date">2019</p>
             <div className="action">
-              <button type="button">View Code</button>
+              <a
+                href="https://github.com/hamzabasrai/hamzabasrai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button type="button">View Code</button>
+              </a>
             </div>
           </Project>
           <Project>
@@ -77,7 +83,13 @@ export class Projects extends Component {
             </p>
             <p className="date">2018</p>
             <div className="action">
-              <button type="button">View Demo</button>
+              <a
+                href="https://talentboard-app.herokuapp.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button type="button">View Demo</button>
+              </a>
             </div>
           </Project>
           <Project>
@@ -89,7 +101,13 @@ export class Projects extends Component {
             </p>
             <p className="date">2017</p>
             <div className="action">
-              <button type="button">View Code</button>
+              <a
+                href="https://github.com/hamzabasrai/DutyHelper"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button type="button">View Code</button>
+              </a>
             </div>
           </Project>
         </ProjectGrid>
