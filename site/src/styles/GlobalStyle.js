@@ -81,29 +81,8 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    color: ${colors.link};
     position: relative;
-    transition: color 0.4s ease-out;
     cursor: pointer;
-
-    &:hover,
-    &:hover:after {
-      color: ${colors.accent};
-      right: 0;
-      text-decoration: none;
-    }
-
-    &:after {
-      border-radius: 1em;
-      border-top: 0.1em solid ${colors.link};
-      content: "";
-      position: absolute;
-      right: 100%;
-      bottom: 0.14em;
-      left: 0;
-      transition: right 0.4s cubic-bezier(0, 0.5, 0, 1),
-        border-color 0.4s ease-out;
-    }
   }
 
   button {
