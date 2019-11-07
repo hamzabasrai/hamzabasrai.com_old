@@ -41,7 +41,7 @@ const BookContainer = styled(Card)`
 
   .goodreads {
     grid-area: 3 / 3 / 4 / 4;
-    justify-self: end; 
+    justify-self: end;
     align-self: center;
     max-height: 48px;
     max-width: 48px;
@@ -65,7 +65,13 @@ export class Book extends Component {
           <h4>{this.props.book.status}</h4>
         </div>
         <div className="goodreads">
-          <img src={gr}></img>
+          <a
+            href={this.props.book.url}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src={gr}></img>
+          </a>
         </div>
       </BookContainer>
     );

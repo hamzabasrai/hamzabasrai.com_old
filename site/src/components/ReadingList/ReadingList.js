@@ -22,22 +22,26 @@ const books = [
   {
     title: "Losing the Signal",
     author: "Jacqui McNish",
-    status: "Currently Reading"
+    status: "Currently Reading",
+    url: "https://www.goodreads.com/book/show/25602451-losing-the-signal"
   },
   {
     title: "The Devotion of Suspect X",
     author: "Keigo Higashino",
-    status: "02/10/2019"
+    status: "03/10/2019",
+    url: "https://www.goodreads.com/book/show/8686068-the-devotion-of-suspect-x"
   },
   {
     title: "Prisoner's Dilemma",
     author: "William Poundstone",
-    status: "01/10/2019"
+    status: "01/10/2019",
+    url: "https://www.goodreads.com/book/show/29506.Prisoner_s_Dilemma"
   },
   {
     title: "Circe",
     author: "Madeline Miller",
-    status: "26/07/2019"
+    status: "26/07/2019",
+    url: "https://www.goodreads.com/book/show/35959740-circe"
   }
 ];
 
