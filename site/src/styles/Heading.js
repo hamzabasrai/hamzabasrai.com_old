@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../styles/theme";
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes } = theme;
 
  const Heading = styled.h2`
   font-size: ${fontSizes.headerSmall};

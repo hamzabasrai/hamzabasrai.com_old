@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../../styles/theme";
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes } = theme;
 
 const SuggestionWrapper = styled.form`
   display: grid;

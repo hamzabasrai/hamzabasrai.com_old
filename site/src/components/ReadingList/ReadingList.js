@@ -20,28 +20,28 @@ const BookList = styled.div`
 
 const books = [
   {
+    title: "Recursion",
+    author: "Blake Crouch",
+    status: "Currently Reading",
+    url: "https://www.goodreads.com/book/show/42046112-recursion"
+  },
+  {
+    title: "Talking to Strangers",
+    author: "Malcolm Gladwell",
+    status: "31/12/2019",
+    url: "https://www.goodreads.com/book/show/43848929-talking-to-strangers"
+  },
+  {
+    title: "Starsight",
+    author: "Brandon Sanderson",
+    status: "21/12/2019",
+    url: "https://www.goodreads.com/book/show/42769202-starsight"
+  },
+  {
     title: "Losing the Signal",
     author: "Jacqui McNish",
-    status: "Currently Reading",
+    status: "15/11/2019",
     url: "https://www.goodreads.com/book/show/25602451-losing-the-signal"
-  },
-  {
-    title: "The Devotion of Suspect X",
-    author: "Keigo Higashino",
-    status: "03/10/2019",
-    url: "https://www.goodreads.com/book/show/8686068-the-devotion-of-suspect-x"
-  },
-  {
-    title: "Prisoner's Dilemma",
-    author: "William Poundstone",
-    status: "01/10/2019",
-    url: "https://www.goodreads.com/book/show/29506.Prisoner_s_Dilemma"
-  },
-  {
-    title: "Circe",
-    author: "Madeline Miller",
-    status: "26/07/2019",
-    url: "https://www.goodreads.com/book/show/35959740-circe"
   }
 ];
 
@@ -76,7 +76,7 @@ export class ReadingList extends Component {
         </p>
         <BookList>
           {books.map(value => {
-            return <Book book={value}></Book>
+            return <Book book={value} key={value.url}></Book>;
           })}
         </BookList>
         <Suggestion></Suggestion>

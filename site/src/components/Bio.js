@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Section from "../styles/Section";
 import styled from "styled-components";
 import theme from "../styles/theme";
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes } = theme;
 
 const Title = styled.h1`
   font-size: ${fontSizes.headerMedium};

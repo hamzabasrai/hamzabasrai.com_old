@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Card from "../../styles/Card";
 import theme from "../../styles/theme";
 import gr from "../../images/goodreads.png";
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes } = theme;
 
 const BookContainer = styled(Card)`
   display: grid;
@@ -53,15 +53,15 @@ export class Book extends Component {
     return (
       <BookContainer>
         <div className="title">
-          <label className="label">Title</label>
+          <p className="label">Title</p>
           <h3>{this.props.book.title}</h3>
         </div>
         <div className="author">
-          <label className="label">Author</label>
+          <p className="label">Author</p>
           <h4>{this.props.book.author}</h4>
         </div>
         <div className="status">
-          <label className="label">Date Completed</label>
+          <p className="label">Date Completed</p>
           <h4>{this.props.book.status}</h4>
         </div>
         <div className="goodreads">
@@ -70,7 +70,7 @@ export class Book extends Component {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img src={gr}></img>
+            <img src={gr} alt="GoodReads Logo"></img>
           </a>
         </div>
       </BookContainer>

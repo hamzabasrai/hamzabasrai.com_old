@@ -4,7 +4,7 @@ import Heading from "../styles/Heading";
 import styled from "styled-components";
 import Card from "../styles/Card";
 import theme from "../styles/theme";
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes } = theme;
 
 const ProjectGrid = styled.div`
   display: grid;
