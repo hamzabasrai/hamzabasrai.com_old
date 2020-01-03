@@ -16,7 +16,7 @@ const Section = styled.section`
   }
 
   @media screen and (min-width: 1440px) {
-    padding-top: 15%;
+    padding-top: 10%;
   }
 `;
 
