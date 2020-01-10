@@ -20,9 +20,15 @@ const BookList = styled.div`
 
 const books = [
   {
+    title: "Why We Sleep",
+    author: "Matthew Walker",
+    status: "Currently Reading",
+    url: "https://www.goodreads.com/book/show/34466963-why-we-sleep"
+  },
+  {
     title: "Recursion",
     author: "Blake Crouch",
-    status: "Currently Reading",
+    status: "07/01/2020",
     url: "https://www.goodreads.com/book/show/42046112-recursion"
   },
   {
@@ -37,12 +43,6 @@ const books = [
     status: "21/12/2019",
     url: "https://www.goodreads.com/book/show/42769202-starsight"
   },
-  {
-    title: "Losing the Signal",
-    author: "Jacqui McNish",
-    status: "15/11/2019",
-    url: "https://www.goodreads.com/book/show/25602451-losing-the-signal"
-  }
 ];
 
 export class ReadingList extends Component {
